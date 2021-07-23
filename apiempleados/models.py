@@ -5,7 +5,7 @@ from phone_field import PhoneField
 # Create your models here.
 class Empleado(models.Model):
     nombre_completo = models.CharField(max_length=200)
-    email = models.EmailField(max_length=200)
+    email = models.EmailField(max_length=200, unique=True)
     contacto = PhoneField(blank=True, help_text="Teléfono de contacto")
     direccion = models.TextField()
     

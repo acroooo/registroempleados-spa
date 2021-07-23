@@ -4,5 +4,8 @@ from .models import *
 
 
 class EmpleadoSerializer(serializers.ModelSerializer):
-    model = Empleado
-    fields = ('id', 'nombre_completo', 'email', 'contacto', 'direccion')
+    class Meta:
+        model = Empleado
+        fields = ('id', 'nombre_completo', 'email', 'contacto', 'direccion')
+
+        
